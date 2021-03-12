@@ -17,8 +17,14 @@ echo ===========================================================================
 : ${NEO4J_HOME:?"Environment variable NEO4J_HOME is unset or empty"}
 # env vars can be empty, hence no check is required
 
+
+echo "./stop-neo4j.sh"
 ./stop-neo4j.sh
+echo "./delete-neo4j-database.sh"
 ./delete-neo4j-database.sh
+echo "./import-to-neo4j.sh"
 ./import-to-neo4j.sh
+echo "./start-neo4j.sh"
 ./start-neo4j.sh
+echo "./create-indices.sh"
 ./create-indices.sh
